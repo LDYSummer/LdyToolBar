@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LdyToolBar">
+
+        <attr name="backgroundColor" format="color"/>
+
+        <attr name="showBack" format="boolean"/>
+        <attr name="backImg" format="reference"/>
+
+        <attr name="titleStr" format="string"/>
+        <attr name="titleColor" format="color"/>
+
+        <attr name="showMenuLeft" format="boolean"/>
+        <attr name="menuImgLeft" format="reference"/>
+
+        <attr name="showMenuRight" format="boolean"/>
+        <attr name="menuImgRight" format="reference"/>
+
+        <attr name="showMenuText" format="boolean"/>
+        <attr name="menuTextStr" format="string"/>
+        <attr name="menuTextColor" format="color"/>
+
+    </declare-styleable>
+    
+</resources>

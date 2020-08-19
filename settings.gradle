@@ -1,0 +1,3 @@
+include ':toolbarlibrary'
+include ':app'
+rootProject.name = "ToolBarDemo"
