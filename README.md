@@ -1,7 +1,7 @@
 # LdyToolBar
 [![](https://jitpack.io/v/LDYSummer/LdyToolBar.svg)](https://jitpack.io/#LDYSummer/LdyToolBar)
 快速设置ToolBar
-- 自定义toolbar背景颜色
+- 自定义toolbar背景颜色或图片
 - 自定义返回图标/标题/其他功能按钮
 - 右侧功能按钮 图标类最多2个/文字类最多1个
 
@@ -26,7 +26,7 @@
 
 |名称 | 属性 | 参数说明 |
 |-----|-----|-----------
-|toolbar背景颜色 | app:backgroundColor | color 默认为colorPrimary |
+|toolbar背景颜色 | app:backgroundRes | reference color/drawable-res 默认为colorPrimary res |
 |是否显示返回图标| app:showBack | boolean 默认为true |
 |设置返回图标res | app:backImg | resource id 默认为system back ios #ffffff |
 |设置标题 | app:titleStr | string |
