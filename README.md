@@ -19,7 +19,7 @@
 #### dependency
 ```javascript
   dependencies {
-      implementation 'com.github.LDYSummer:LdyToolBar:1.0.0'
+      implementation 'com.github.LDYSummer:LdyToolBar:1.0.1'
   }
 ```
 ### 属性说明
