@@ -40,7 +40,7 @@ public class LdyToolBar extends RelativeLayout {
         LayoutInflater.from(context).inflate(R.layout.toolbar_public_layout,this);
 
         TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.LdyToolBar);
-        mBackground = ta.getColor(R.styleable.LdyToolBar_backgroundColor,getResources().getColor(R.color.colorPrimary));
+        mBackground = ta.getResourceId(R.styleable.LdyToolBar_backgroundRes, R.drawable.toolbar_bg);
 
         mShowBack = ta.getBoolean(R.styleable.LdyToolBar_showBack,true);
         mBackImgRes = ta.getResourceId(R.styleable.LdyToolBar_backImg,R.drawable.back_white);
@@ -67,7 +67,7 @@ public class LdyToolBar extends RelativeLayout {
     private void initView(){
 
         //背景
-        setBackgroundColor(mBackground);
+        setBackgroundResource(mBackground);
         //返回图标
         mBackImg = findViewById(R.id.toolbar_public_back);
         if (mShowBack){

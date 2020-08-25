@@ -2,13 +2,12 @@
 <Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="20dp"
-    android:background="@color/colorPrimary">
+    android:layout_height="68dp"
+    android:paddingTop="20dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
+        android:layout_height="48dp"
         android:gravity="center_vertical"
         android:layout_marginEnd="11dp">
 
@@ -73,3 +72,4 @@
     </RelativeLayout>
 
 </Toolbar>
+

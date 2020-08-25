@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         LdyToolBar toolBar = findViewById(R.id.main_toolbar);
+        toolBar.setBackClickFinish(MainActivity.this);
         toolBar.setBackClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

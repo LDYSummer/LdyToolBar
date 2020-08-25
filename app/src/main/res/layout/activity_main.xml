@@ -12,9 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleStr="@string/app_name"
-        app:showMenuLeft="true"
-        app:menuImgLeft="@drawable/add"
-        app:showMenuRight="true"
-        app:menuImgRight="@drawable/download" />
+        app:showMenuText="true"/>
 
 </LinearLayout>
