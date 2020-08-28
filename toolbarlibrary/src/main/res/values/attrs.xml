@@ -3,7 +3,7 @@
 
     <declare-styleable name="LdyToolBar">
 
-        <attr name="backgroundRes" format="color"/>
+        <attr name="backgroundRes" format="reference"/>
 
         <attr name="showBack" format="boolean"/>
         <attr name="backImg" format="reference"/>
