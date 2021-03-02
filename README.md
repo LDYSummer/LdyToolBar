@@ -19,7 +19,7 @@
 #### dependency
 ```javascript
   dependencies {
-      implementation 'com.github.LDYSummer:LdyToolBar:1.0.3'
+      implementation 'com.github.LDYSummer:LdyToolBar:1.0.4'
   }
 ```
 ### 属性说明
@@ -31,6 +31,7 @@
 |设置返回图标res | app:backImg | resource id 默认为system back ios #ffffff |
 |设置标题 | app:titleStr | string |
 |设置标题颜色 | app:titleColor | color 默认#ffffff |
+|设置标题字号 | app:titleSize | int 默认17 |
 |是否显示功能按钮(图标)左 | app:showMenuLeft | boolean 默认为false |
 |设置功能按钮(左)图标 | app:menuImgLeft | resourc id |
 |是否显示功能按钮(图标)右 | app:showMenuRight | boolean 默认为false |
@@ -38,6 +39,7 @@
 |是否显示功能按钮(文字) | app:showMenuText | boolean 默认为false |
 |设置功能按钮(文字)标题 | app:menuTextStr | string |
 |设置功能按钮(文字)颜色 | app:menuTextColor | color 默认#ffffff | 
+|设置功能按钮(文字)字号 | app:menuTextSize | int 默认14 |
 
 ### 使用
 #### XML
