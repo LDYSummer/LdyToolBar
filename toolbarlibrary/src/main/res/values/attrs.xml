@@ -3,6 +3,7 @@
 
     <declare-styleable name="LdyToolBar">
 
+        //title menutext size
         <attr name="backgroundRes" format="reference"/>
 
         <attr name="showBack" format="boolean"/>
@@ -10,6 +11,7 @@
 
         <attr name="titleStr" format="string"/>
         <attr name="titleColor" format="color"/>
+        <attr name="titleSize" format="integer"/>
 
         <attr name="showMenuLeft" format="boolean"/>
         <attr name="menuImgLeft" format="reference"/>
@@ -20,6 +22,7 @@
         <attr name="showMenuText" format="boolean"/>
         <attr name="menuTextStr" format="string"/>
         <attr name="menuTextColor" format="color"/>
+        <attr name="menuTextSize" format="integer"/>
 
     </declare-styleable>
     

@@ -12,6 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleStr="@string/app_name"
-        app:showMenuText="true" />
+        app:showMenuText="true"
+        app:titleSize="17"
+        app:menuTextSize="14"
+        app:menuTextStr="@string/app_name"/>
 
 </LinearLayout>

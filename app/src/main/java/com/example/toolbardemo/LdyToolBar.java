@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ public class LdyToolBar extends RelativeLayout {
     private int mBackImgRes;
     private String mTitleStr;
     private int mTitleColor;
+    private int mTitleSize;
     private boolean mShowMenuLeft;
     private int mMenuImgLeftRes;
     private boolean mShowMenuRight;
@@ -25,6 +27,7 @@ public class LdyToolBar extends RelativeLayout {
     private boolean mShowMenuText;
     private String mMenuTextStr;
     private int mMenuTextColor;
+    private int mMenuTextSize;
 
     private ImageView mBackImg;
     private TextView mTitle;
@@ -49,6 +52,7 @@ public class LdyToolBar extends RelativeLayout {
         mTitleStr = "";
         mTitleStr = ta.getString(R.styleable.LdyToolBar_titleStr);
         mTitleColor = ta.getColor(R.styleable.LdyToolBar_titleColor,getResources().getColor(R.color.toolbarTitleColorDefault));
+        mTitleSize = ta.getInteger(R.styleable.LdyToolBar_titleSize,17);
 
         mShowMenuLeft = ta.getBoolean(R.styleable.LdyToolBar_showMenuLeft,false);
         mMenuImgLeftRes = ta.getResourceId(R.styleable.LdyToolBar_menuImgLeft,R.drawable.back_white);
@@ -59,6 +63,7 @@ public class LdyToolBar extends RelativeLayout {
         mShowMenuText = ta.getBoolean(R.styleable.LdyToolBar_showMenuText,false);
         mMenuTextStr = ta.getString(R.styleable.LdyToolBar_menuTextStr);
         mMenuTextColor = ta.getColor(R.styleable.LdyToolBar_menuTextColor,getResources().getColor(R.color.toolbarTitleColorDefault));
+        mMenuTextSize = ta.getInteger(R.styleable.LdyToolBar_menuTextSize,14);
 
         ta.recycle();
 
@@ -81,6 +86,7 @@ public class LdyToolBar extends RelativeLayout {
         mTitle = findViewById(R.id.toolbar_public_title);
         mTitle.setText(mTitleStr);
         mTitle.setTextColor(mTitleColor);
+        mTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP,mTitleSize);
         //menu btn left
         mMenuImgLeft = findViewById(R.id.toolbar_public_menu_img_btn_left);
         if (mShowMenuLeft){
@@ -103,6 +109,7 @@ public class LdyToolBar extends RelativeLayout {
             mMenuText.setVisibility(VISIBLE);
             mMenuText.setText(mMenuTextStr);
             mMenuText.setTextColor(mMenuTextColor);
+            mMenuText.setTextSize(TypedValue.COMPLEX_UNIT_SP,mMenuTextSize);
         }else {
             mMenuText.setVisibility(GONE);
         }
