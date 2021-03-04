@@ -5,14 +5,20 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 public class LdyToolBar extends RelativeLayout {
+
+    private boolean mIncludeStatusBar;
 
     private int mBackground;
     private boolean mShowBack;
@@ -29,6 +35,7 @@ public class LdyToolBar extends RelativeLayout {
     private int mMenuTextColor;
     private int mMenuTextSize;
 
+    private Toolbar mToolbar;
     private ImageView mBackImg;
     private TextView mTitle;
     private ImageView mMenuImgLeft;
@@ -44,6 +51,9 @@ public class LdyToolBar extends RelativeLayout {
         LayoutInflater.from(context).inflate(R.layout.toolbar_public_layout,this);
 
         TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.LdyToolBar);
+
+        mIncludeStatusBar = ta.getBoolean(R.styleable.LdyToolBar_includeStatusBar,true);
+
         mBackground = ta.getResourceId(R.styleable.LdyToolBar_backgroundRes, R.drawable.toolbar_bg);
 
         mShowBack = ta.getBoolean(R.styleable.LdyToolBar_showBack,true);
@@ -71,6 +81,11 @@ public class LdyToolBar extends RelativeLayout {
     }
 
     private void initView(){
+
+        //是否包含statusBar
+        mToolbar = findViewById(R.id.toolbar);
+        int top = mIncludeStatusBar?20:0;
+        mToolbar.setPadding(0,top,0,0);
 
         //背景
         setBackgroundResource(mBackground);
@@ -167,6 +182,14 @@ public class LdyToolBar extends RelativeLayout {
      */
     public void setMenuTextClickListener(OnClickListener listener){
         mMenuText.setOnClickListener(listener);
+    }
+
+    /**
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     */
+    public static int dip2px(Context context, float dpValue) {
+         final float scale = context.getResources().getDisplayMetrics().density;
+         return (int) (dpValue * scale + 0.5f);
     }
 
 }

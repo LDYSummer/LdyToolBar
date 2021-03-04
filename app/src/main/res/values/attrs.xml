@@ -3,7 +3,8 @@
 
     <declare-styleable name="LdyToolBar">
 
-        //title menutext size
+        <attr name="includeStatusBar" format="boolean"/>
+
         <attr name="backgroundRes" format="reference"/>
 
         <attr name="showBack" format="boolean"/>
