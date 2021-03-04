@@ -19,13 +19,14 @@
 #### dependency
 ```javascript
   dependencies {
-      implementation 'com.github.LDYSummer:LdyToolBar:1.0.4'
+      implementation 'com.github.LDYSummer:LdyToolBar:1.0.5'
   }
 ```
 ### 属性说明
 
 |名称 | 属性 | 参数说明 |
 |-----|-----|-----------
+|高度是否包含statusbar | app:includeStatusBar | boolean 默认true |
 |toolbar背景颜色 | app:backgroundRes | reference color/drawable-res 默认为colorPrimary res |
 |是否显示返回图标| app:showBack | boolean 默认为true |
 |设置返回图标res | app:backImg | resource id 默认为system back ios #ffffff |
